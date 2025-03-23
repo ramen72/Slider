@@ -36,12 +36,13 @@ a{
 }
 .slider{
     width: 800px;
+    height: 500px;
     position: relative;
     overflow: hidden;
     margin: 20px auto;
 }
 .slides{
-    display: flex;
+    /* display: flex; */
     transition: transform 0.5s ease-in-out;
     -webkit-transition: transform 0.5s ease-in-out;
     -moz-transition: transform 0.5s ease-in-out;
@@ -72,22 +73,32 @@ a{
 }
 .prev, .next{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     background-color: #000;
     color: #fff;
     padding: 10px;
     cursor: pointer;
 }
 .prev{
-     left: 10px;
+     top: 10px;
+     transform: rotate(90deg);
+     -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+     -ms-transform: rotate(90deg);
+     -o-transform: rotate(90deg);
 }
 .next{
-    right: 10px;
+    bottom: 50px;
+    transform: rotate(90deg);
+     -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+     -ms-transform: rotate(90deg);
+     -o-transform: rotate(90deg);
 }
 .dots{
     padding: 10px;
