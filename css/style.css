@@ -39,6 +39,11 @@ a{
     position: relative;
     overflow: hidden;
     margin: 20px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .slides{
     display: flex;

@@ -34,42 +34,37 @@ a{
     background-color: #ff06c1;
     color: #fff;
 }
+
+
 .slider{
     width: 800px;
-    height: 500px;
-    position: relative;
     margin: 20px auto;
+    background-color: #ff06c1;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    height: 500px;
     overflow: hidden;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    position: relative;
+   
 }
 .slides{
+    display: flex;
+    flex-direction: column;
     transition: transform 0.5s ease-in-out;
     -webkit-transition: transform 0.5s ease-in-out;
     -moz-transition: transform 0.5s ease-in-out;
     -ms-transition: transform 0.5s ease-in-out;
     -o-transition: transform 0.5s ease-in-out;
-    transform: translateY(-00%);
-    -webkit-transform: translateY(-00%);
-    -moz-transform: translateY(-00%);
-    -ms-transform: translateY(-00%);
-    -o-transform: translateY(-00%);
 }
-/* .slide{
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 .slide img{
     width: 800px;
     height: 500px;
-    display: block;
-    object-fit: cover;
 }
+
+
 .prev, .next{
     position: absolute;
     left: 50%;

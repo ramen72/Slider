@@ -31,9 +31,8 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         slides.style.transform = `translateY(${-currentSlide * 100}%)`;
         console.log(currentSlide * 100)
-        // dotsList.forEach((index)=>{
-        //     createDot.classList.remove("active");
-        // })
+        dotsList.forEach(dot => dot.classList.remove('active'));
+        dotsList[currentSlide].classList.add('active');
     }
 
 
