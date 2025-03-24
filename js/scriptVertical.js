@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }else{
             currentSlide = index;
         }
-        slides.style.transform = `translateY(${-currentSlide * 100}%)`;
+        slides.style.transform = `translateY(${-(currentSlide * 100)/slideCount}%)`;
         console.log(currentSlide * 100)
         dotsList.forEach(dot => dot.classList.remove('active'));
         dotsList[currentSlide].classList.add('active');
@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', function(){
     nextButton.addEventListener("click",function(){
         console.log(currentSlide + 1);
         updateSlider(currentSlide + 1)
+    })
+    prevButton.addEventListener("click",function(){
+        console.log(currentSlide - 1);
+        updateSlider(currentSlide - 1)
     })
 
 
