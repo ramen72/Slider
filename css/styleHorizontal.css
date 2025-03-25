@@ -34,13 +34,15 @@ a{
     background-color: #ff06c1;
     color: #fff;
 }
-
+.navBar a:nth-child(2){
+    background-color: #ff06c1;
+    color: #fff;
+}
 
 .slider{
     width: 800px;
     height: 500px;
     margin: 20px auto;
-    background-color: #ff06c1;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -61,6 +63,7 @@ a{
 }
 .slide{
     min-height: 100%;
+    margin: -2px;
 }
 .slide img{
     width: 800px;
@@ -97,7 +100,7 @@ a{
      -ms-transform: rotate(90deg);
      -o-transform: rotate(90deg);
 }
-.dots{
+.dots {
     padding: 10px;
     background-color: #0c0c0c;
     position: absolute;
@@ -113,6 +116,8 @@ a{
     justify-content: center;
     align-items: center;
     row-gap: 10px;
+    border-radius: 20px;
+    outline: 3px solid #fdfdfd;
 }
 .dot{
     width: 10px;

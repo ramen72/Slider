@@ -34,6 +34,10 @@ a{
     background-color: #ff06c1;
     color: #fff;
 }
+.navBar a:first-child{
+    background-color: #ff06c1;
+    color: #fff;
+}
 .slider{
     width: 800px;
     position: relative;

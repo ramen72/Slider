@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', function(){
         updateSlider(currentSlide - 1)
     })
 
+    dotsList.forEach(dot=>{
+        dot.addEventListener("click",function(){
+            let index = dot.getAttribute("data-index")
+            updateSlider(index)
+        })
+    })
 
 
 
