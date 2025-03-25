@@ -1,4 +1,8 @@
+// Add "DOMContentLoaded" EventListener in document
 document.addEventListener('DOMContentLoaded', function(){
+
+    // Select DOM Element
+    let slider = document.querySelector ('.slider');
     let slides = document.querySelector ('.slides');
     let dotsContainer = document.querySelector('.dots');
     let prevButton = document.querySelector('.prev');
@@ -7,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let slideCount = slide.length 
     let currentSlide = 0;
 
+    // Creating Dots
     for( let i = 0; i < slideCount; i++){
         console.log(i);
         let createDot = document.createElement("span");
@@ -17,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function(){
         createDot.setAttribute("data-index",i)
         dotsContainer.appendChild(createDot)
     }
-
     let dotsList = document.querySelectorAll('.dot')
     
 
+    // Slider Update Function Declaration
     function updateSlider(index){
         if( index >= slideCount ){
             currentSlide = 0;
@@ -35,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(){
         dotsList[currentSlide].classList.add('active');
     }
 
-
+    // Add Event-Listener in Previous & Next Button
     nextButton.addEventListener("click",function(){
         console.log(currentSlide + 1);
         updateSlider(currentSlide + 1)
@@ -45,12 +50,31 @@ document.addEventListener('DOMContentLoaded', function(){
         updateSlider(currentSlide - 1)
     })
 
+     // Add Event-Listener in every dot
     dotsList.forEach(dot=>{
         dot.addEventListener("click",function(){
             let index = dot.getAttribute("data-index")
             updateSlider(index)
         })
     })
+
+    // Creating Autoplay
+    let autoSlide;
+    function startAutoPlay(){
+        autoSlide = setInterval(()=>{
+            updateSlider(currentSlide + 1)
+        },3000)
+    }
+
+    // Stop Autoplay function declaration  
+    function stopAutoPlay(){
+        clearInterval(autoSlide);
+    }
+
+    // Autoplay start and stop execution
+    startAutoPlay()
+    slider.addEventListener("mouseover",stopAutoPlay)
+    slider.addEventListener("mouseout",startAutoPlay)
 
 
 
