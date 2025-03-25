@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     })
 
-    // Creating Autoplay
+    // Creating Auto Play
     let autoSlide;
     function startAutoPlay(){
         autoSlide = setInterval(()=>{
@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', function(){
         },3000)
     }
 
-    // Stop Autoplay function declaration  
+    // Stop Auto Play function declaration  
     function stopAutoPlay(){
         clearInterval(autoSlide);
     }
 
-    // Autoplay start and stop execution
+    // Auto Play start and stop execution
     startAutoPlay()
     slider.addEventListener("mouseover",stopAutoPlay)
     slider.addEventListener("mouseout",startAutoPlay)
